@@ -191,7 +191,7 @@ const AboutSection = () => {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 max-[600px]:px-4 max-[600px]:py-2"
               >
                 {[
-                  { label: "Experience", val: "1.5+ yrs" },
+                  { label: "Experience", val: "1+ months" },
                   { label: "Focus", val: "React" },
                   { label: "Stack", val: "UI/UX" },
                   { label: "Performance", val: "Fast" },
@@ -297,7 +297,7 @@ const AboutSection = () => {
       </section>
       <section
         id="services"
-        className="py-24 bg-[#020617] relative overflow-hidden"
+        className="py-10 bg-[#020617] relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
@@ -396,7 +396,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section id="experience" className="py-24 bg-[#020617] relative">
+      <section id="experience" className="py-10 bg-[#020617] relative">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,7 +444,7 @@ const AboutSection = () => {
                 },
               },
             }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3  gap-8"
           >
             {[
               {
@@ -513,7 +513,7 @@ const AboutSection = () => {
         </div>
       </section>
 
-      <section id="blog" className="py-24 bg-[#020617] relative">
+      <section id="blog" className="py-10 bg-[#020617] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -630,7 +630,7 @@ const AboutSection = () => {
 
       <section
         id="contact"
-        className="py-24 bg-[#020617] relative overflow-hidden"
+        className="py-10 bg-[#020617] relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 relative z-10">
           <motion.div

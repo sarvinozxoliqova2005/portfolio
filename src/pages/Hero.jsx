@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <section id="about" className="bg-slate-950 relative overflow-hidden min-h-screen flex flex-col justify-center">
-      <div className="md:hidden fixed top-6 right-0 z-[100]">
+      <div className="md:hidden fixed top-6 right-0 z-[50]">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="p-2.5 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-white active:scale-90 transition-all shadow-xl"
