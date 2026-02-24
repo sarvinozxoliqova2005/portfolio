@@ -122,7 +122,7 @@ const AboutSection = () => {
               )}
             </div>
 
-            <button className="bg-white/5 border border-white/10 px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 hover:bg-white/10 transition-all active:scale-95 backdrop-blur-md">
+            <button className="bg-white/5 border border-white/10 px-5 py-2.5 rounded-full text-sm font-semibold hidden md:flex items-center gap-2 hover:bg-white/10 transition-all active:scale-95 backdrop-blur-md">
               <Send size={16} className="text-cyan-400" />
               Let's talk
             </button>
@@ -140,7 +140,7 @@ const AboutSection = () => {
 
               <motion.h1
                 variants={itemVariants}
-                className="text-5xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight"
+                className="text-5xl  max-[900px]:text-[40px] max-[600px]:text-[32px] font-black mb-6 leading-[1.1] tracking-tight"
               >
                 I craft{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
@@ -151,7 +151,7 @@ const AboutSection = () => {
 
               <motion.p
                 variants={itemVariants}
-                className="text-gray-400 text-lg mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-gray-400 text-[32px] max-[900px]:text-[24px] max-[600px]:text-[18px] mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
               >
                 I'm <span className="text-white font-semibold">Sarvinoz</span> —
                 frontend developer creating fast, responsive, and beautiful web
@@ -164,14 +164,14 @@ const AboutSection = () => {
               >
                 <a
                   href="#experience"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-2xl font-bold shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 max-[600px]:px-5 max-[600px]:py-3 max-[600px]:text-[14px] rounded-2xl font-bold shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all"
                 >
                   See Projects
                 </a>
 
                 <a
                   href="#about"
-                  className="w-30 h-14 flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-2xl  hover:bg-white/10 transition-al font-bold text-white"
+                  className="w-30 h-14 flex items-center justify-center gap-2 max-[600px]:w-25 max-[600px]:h-12 max-[600px]:text-[12px] bg-white/5 border border-white/10 rounded-2xl  hover:bg-white/10 transition-al font-bold text-white"
                 >
                   <IoPersonOutline />
                   About me
@@ -179,7 +179,7 @@ const AboutSection = () => {
 
                 <a
                   href="#contact"
-                  className="w-30 h-14 flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-2xl  hover:bg-white/10 transition-al font-bold text-white"
+                  className="w-30 h-14 flex items-center justify-center gap-2 max-[600px]:w-25 max-[600px]:h-12 max-[600px]:text-[12px] bg-white/5 border border-white/10 rounded-2xl  hover:bg-white/10 transition-al font-bold text-white"
                 >
                   <GrContact />
                   Contact
@@ -188,7 +188,7 @@ const AboutSection = () => {
 
               <motion.div
                 variants={itemVariants}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4"
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-[600px]:px-4 max-[600px]:py-2"
               >
                 {[
                   { label: "Experience", val: "1.5+ yrs" },
@@ -227,7 +227,7 @@ const AboutSection = () => {
                   <label className="block text-[10px] font-bold text-gray-500 uppercase mb-2">
                     Coding...
                   </label>
-                  <div className="text-3xl font-bold border-l-2 border-cyan-400 pl-4 h-10 flex items-center min-w-[200px]">
+                  <div className="text-3xl max-[900px]:text-2xl max-[600px]:text-xl font-bold border-l-2 border-cyan-400 pl-4 h-10 flex items-center min-w-[200px]">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
                       {text}
                     </span>
@@ -300,7 +300,6 @@ const AboutSection = () => {
         className="py-24 bg-[#020617] relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          {/* Sarlavha qismi uchun animatsiya */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -322,8 +321,6 @@ const AboutSection = () => {
               and performance-focused frontend.
             </p>
           </motion.div>
-
-          {/* Kartochkalar uchun konteyner */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -333,7 +330,7 @@ const AboutSection = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  staggerChildren: 0.2, // Kartochkalar 0.2s farq bilan chiqadi
+                  staggerChildren: 0.2,
                 },
               },
             }}
@@ -646,14 +643,14 @@ const AboutSection = () => {
             <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
               Contact
             </p>
-            <h2 className="text-4xl font-black text-white mb-8">
+            <h2 className="text-4xl max-[600px]:text-3xl font-black text-white mb-8">
               Let's build something{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 amazing.
               </span>
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 gap-4 mb-8 ">
               {[
                 { label: "Location", val: "Uzbekistan • Tashkent" },
                 { label: "Email", val: "seyranseyran120@gmail.com" },
@@ -666,12 +663,12 @@ const AboutSection = () => {
                     scale: 1.02,
                     backgroundColor: "rgba(255,255,255,0.08)",
                   }}
-                  className="p-4 bg-white/5 rounded-2xl border border-white/5 transition-colors"
+                  className="p-4 bg-white/5 rounded-2xl border border-white/5 transition-colors "
                 >
-                  <p className="text-gray-500 text-[10px] uppercase mb-1">
+                  <p className="text-gray-500 text-[10px] uppercase mb-1 ">
                     {info.label}
                   </p>
-                  <p className="text-white text-sm truncate">{info.val}</p>
+                  <p className="text-white text-sm truncate max-[600px]:text-[10px]">{info.val}</p>
                 </motion.div>
               ))}
             </div>
@@ -692,12 +689,12 @@ const AboutSection = () => {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 text-white outline-none focus:border-cyan-400 transition-all focus:bg-white/10"
+                  className="bg-white/5 border border-white/10 rounded-xl p-4 max-[600px]:text-[14px] text-white outline-none focus:border-cyan-400 transition-all focus:bg-white/10"
                 />
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 text-white outline-none focus:border-cyan-400 transition-all focus:bg-white/10"
+                  className="bg-white/5 border border-white/10  max-[600px]:text-[10px]  rounded-xl p-4 text-white outline-none focus:border-cyan-400 transition-all focus:bg-white/10"
                 />
               </div>
               <textarea
@@ -720,9 +717,9 @@ const AboutSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-center text-white/40 text-[10px] mt-12 pb-8 relative z-10"
+          className="text-center text-white text-[10px] mt-12 pb-8 relative z-10"
         >
-          © 2026 Alyor-dev. All Rights Reserved.
+          © 2026 Sarvinoz Xoliqova. All Rights Reserved.
         </motion.footer>
         <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
       </section>
