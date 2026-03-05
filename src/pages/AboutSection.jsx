@@ -13,6 +13,11 @@ import {
   Zap,
   MapPin,
 } from "lucide-react";
+import { MdDashboard } from "react-icons/md";
+import { PiBagFill, PiStudentFill } from "react-icons/pi";
+import { GiShoppingBag } from "react-icons/gi";
+import { IoCalendarNumberSharp } from "react-icons/io5";
+import { RiSettings3Fill } from "react-icons/ri";
 
 const PortfolioPage = () => {
   const containerVariants = {
@@ -116,26 +121,30 @@ const PortfolioPage = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-cyan-400 hover:bg-cyan-500  cursor-pointer text-[#0A0F1E] px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-cyan-500/20"
+                  className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer text-[#0A0F1E] px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-cyan-500/20"
                 >
-                  Book Me
+                  Get in Touch
                 </motion.button>
-                <motion.button
+
+                <motion.a
+                  href="/Sarvinoz_CV.pdf" 
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center text-lg max-[600px]:text-sm gap-2 text-white hover:text-cyan-400  cursor-pointer group px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-cyan-500/20"
+                  className="flex items-center text-lg max-[600px]:text-sm gap-2 text-white hover:text-cyan-400 cursor-pointer group px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-cyan-500/20 bg-white/5 hover:bg-white/10"
                 >
                   <Download
                     size={20}
-                    className="group-hover:translate-y-1 text-lg max-[600px]:text-sm  transition-transform cursor-pointer"
+                    className="group-hover:translate-y-1 text-lg max-[600px]:text-sm transition-transform"
                   />
                   Download CV
-                </motion.button>
+                </motion.a>
               </motion.div>
-
               <motion.div
                 variants={itemVariants}
-                className="flex items-center gap-4 pt-4"
+                className="flex items-center  gap-4 pt-4"
               >
                 {[
                   {
@@ -164,7 +173,7 @@ const PortfolioPage = () => {
               </motion.div>
             </motion.div>
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2  cursor-pointer gap-6">
                 {[
                   { value: "1+ months", label: "Experience" },
                   { value: "4+", label: "Projects Done" },
@@ -333,37 +342,37 @@ const PortfolioPage = () => {
               {
                 title: "CRM Dashboard",
                 desc: "React, Redux, Ant Design",
-                icon: "📊",
+                icon: <MdDashboard />,
                 color: "from-blue-400 to-cyan-400",
               },
               {
                 title: "LMS Platform",
                 desc: "Next.js, TypeScript, Tailwind",
-                icon: "🎓",
+                icon: <PiStudentFill />,
                 color: "from-purple-400 to-pink-400",
               },
               {
                 title: "E-commerce",
                 desc: "React, Zustand, Stripe",
-                icon: "🛍️",
+                icon: <GiShoppingBag />,
                 color: "from-green-400 to-emerald-400",
               },
               {
                 title: "Booking System",
                 desc: "React, Calendar API, Axios",
-                icon: "📅",
+                icon: <IoCalendarNumberSharp />,
                 color: "from-orange-400 to-red-400",
               },
               {
                 title: "Admin Panel",
                 desc: "React, Redux Toolkit, AntD",
-                icon: "⚙️",
+                icon: <RiSettings3Fill />,
                 color: "from-indigo-400 to-blue-400",
               },
               {
                 title: "Portfolio Website",
                 desc: "React, Framer Motion, Tailwind",
-                icon: "💼",
+                icon: <PiBagFill />,
                 color: "from-cyan-400 to-teal-400",
               },
             ].map((item, i) => (
@@ -531,7 +540,6 @@ const PortfolioPage = () => {
                         whileFocus={{ scale: 1.02 }}
                         required
                         type="text"
-                        placeholder="Sarvinoz"
                         className="w-full bg-[#0F1524] border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-cyan-400 transition-all"
                       />
                     </div>
@@ -543,7 +551,6 @@ const PortfolioPage = () => {
                         whileFocus={{ scale: 1.02 }}
                         required
                         type="email"
-                        placeholder="sarvinoz@example.com"
                         className="w-full bg-[#0F1524] border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-cyan-400 transition-all"
                       />
                     </div>
@@ -557,7 +564,6 @@ const PortfolioPage = () => {
                       whileFocus={{ scale: 1.02 }}
                       required
                       type="text"
-                      placeholder="Project inquiry"
                       className="w-full bg-[#0F1524] border border-white/10 rounded-lg px-4 py-3 text-white outline-none focus:border-cyan-400 transition-all"
                     />
                   </div>
